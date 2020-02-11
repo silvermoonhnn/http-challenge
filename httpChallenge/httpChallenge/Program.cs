@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -113,6 +114,26 @@ namespace httpChallenge
 
             Console.WriteLine("-------------------------------------------------------");
             Console.WriteLine();
+
+            var combineFetch = await Combine.fetchCombine();
+            File.WriteAllText(@"/Users/gigaming/Projects/httpChallenge/httpChallenge/combine.json", combineFetch);
+
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine();
+
+            //no 4//
+
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine();
+
+            var scrap = new Scraping();
+            scrap.Start();
+
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine();
+
+            var movie = new Movie();
+            movie.Start();
         }
     }
 }

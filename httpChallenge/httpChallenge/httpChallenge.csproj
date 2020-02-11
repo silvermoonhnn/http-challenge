@@ -45,9 +45,12 @@
     <Compile Include="Fetcher.cs" />
     <Compile Include="Scraping.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="Combine.cs" />
+    <Compile Include="Movie.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="combine.json" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

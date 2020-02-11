@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using IronWebScraper;
 
 namespace httpChallenge
@@ -13,9 +14,13 @@ namespace httpChallenge
 
         public override void Parse(Response response)
         {
-            foreach (var css1 in response.Css("latest ga--latest mt2 clearfix"))
+            foreach (var i in response.Css("a.headline__thumb__link"))
             {
-                string title = css1.TextContentClean;
+                string getLink = i.Attributes["href"];
+                string title = i.InnerTextClean;
+
+                Console.WriteLine(title);
+                Console.WriteLine(getLink);
             }
         }
     }
