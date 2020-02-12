@@ -121,8 +121,7 @@ namespace httpChallenge
             Console.WriteLine("-------------------------------------------------------");
             Console.WriteLine();
 
-            var api = new Api();
-            Console.WriteLine(api);
+            //no4
 
             Console.WriteLine("-------------------------------------------------------");
             Console.WriteLine();
